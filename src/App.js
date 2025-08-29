@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage'; // Import the new Homepage component
+import Home from './pages/Home'; // Import your existing Home.js file
 // import Sidebar from './components/Sidebar'; // Commented out - remove if you want full new design
 import './App.css';
 
@@ -8,12 +8,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Sidebar commented out to use new navigation from Homepage */}
+        {/* Sidebar commented out to use new navigation from Home component */}
         {/* <Sidebar /> */}
         
-        {/* Removed main-content wrapper since Homepage has its own layout */}
+        {/* Removed main-content wrapper since Home has its own layout */}
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Home />} />
           <Route path="*" element={
             <div style={{padding: '2rem', textAlign: 'center', marginTop: '100px'}}>
               <h1>Page Coming Soon</h1>
